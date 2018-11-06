@@ -734,7 +734,8 @@ void _pico_deduce_shadername( const char* fileName, const char* srcName, picoSha
 
 /* deduce shadernames from bitmap or shadername paths */
 void _pico_deduce_shadernames( picoModel_t *model ){
-	for ( int i = 0; i < model->numShaders; ++i ){
+	int i;
+	for ( i = 0; i < model->numShaders; ++i ){
 		/* skip null shaders */
 		if ( model->shader[i] == NULL )
 			continue;
